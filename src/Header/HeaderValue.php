@@ -68,6 +68,8 @@ final class HeaderValue
      */
     public static function isValid($value)
     {
+        // FIX: do not validate header values
+        return true;
         $total = strlen($value);
         for ($i = 0; $i < $total; $i += 1) {
             $ord = ord($value[$i]);
